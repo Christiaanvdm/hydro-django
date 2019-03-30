@@ -55,8 +55,8 @@ In case you don't get some not installed packages, you can run this
 repeatable steps:
 
 1. Close PyCharm
-2. `make kill` or `docker-compose -p ford3 kill`
-3. `make rm` or `docker-compose -p ford3 rm`
+2. `make kill` or `docker-compose -p hydro kill`
+3. `make rm` or `docker-compose -p hydro rm`
 4. `make build`
 5. `make build-devweb`
 6. `make devweb`
@@ -121,7 +121,7 @@ Now set these options:
 
 * **Name:** Django Server
 * **Host:** 0.0.0.0
-* **Port:** (use the http port specified in the docker-compose.yml file, e.g. 8080)`*` **Run browser** If checked, it will open the url after you click run. You should be able to access the running ford3 on 0.0.0.0:61202 (the port that mapped to 8080)
+* **Port:** (use the http port specified in the docker-compose.yml file, e.g. 8080)`*` **Run browser** If checked, it will open the url after you click run. You should be able to access the running hydro on 0.0.0.0:61202 (the port that mapped to 8080)
 * **Additional options:** ``--settings=core.settings.dev_docker``
 * **Run browser:** Optionally set this to your IP address (MacOS/Linux) or your specific IP address (Windows) followed by the port forward address for port 8080 specified in your ``docker-compose.yml`` file. For example: ``http://0.0.0.0:61202``.
 * **Environment vars:** Leave as default unless you need to add something to the env

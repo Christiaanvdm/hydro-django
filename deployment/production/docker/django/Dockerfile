@@ -8,13 +8,13 @@ MAINTAINER Tim Sutton<tim@kartoza.com>
 # Pandoc needed to generate rst dumps, uic compressor needed for django-pipeline
 RUN apt-get update -y; apt-get -y --force-yes install yui-compressor
 
-ARG FORD3_TAG=develop
+ARG HYDRO_TAG=develop
 RUN mkdir -p /usr/src; mkdir -p /home/web  && \
-	git clone --branch ${FORD3_TAG} --depth 1 https://github.com/kartoza/ford3.git /usr/src/ford3 && \
+	git clone --branch ${HYDRO_TAG} --depth 1 https://github.com/kartoza/hydro.git /usr/src/hydro && \
 	rm -rf /home/web/django_project && \
-	ln -s /usr/src/ford3/django_project /home/web/django_project
+	ln -s /usr/src/hydro/django_project /home/web/django_project
 
-RUN cd /usr/src/ford3/deployment/docker && \
+RUN cd /usr/src/hydro/deployment/docker && \
 	pip3 install -r REQUIREMENTS.txt && \
 	pip3 install uwsgi && \
 	rm -rf /uwsgi.conf && \

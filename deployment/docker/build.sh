@@ -1,2 +1,2 @@
 #!/bin/sh
- docker build -t kartoza/ford3 .
+ docker build -t kartoza/hydro .

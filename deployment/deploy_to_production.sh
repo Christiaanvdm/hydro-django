@@ -15,7 +15,7 @@ then
 	VERSION=$1
 	make dbsync
 	make mediasync
-	ssh ford3.kartoza.com "cd /home/web/deployment && git fetch --tags && git checkout $VERSION && make collectstatic && make reload"
+	ssh hydro.kartoza.com "cd /home/web/deployment && git fetch --tags && git checkout $VERSION && make collectstatic && make reload"
 else
 	echo "Deploy to production aborted."
 fi

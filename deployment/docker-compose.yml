@@ -41,10 +41,10 @@ services:
 # This is to build the base image (production)
   base_uwsgi:
     build: docker
-    image: ford3_uwsgi
+    image: hydro_uwsgi
 
   uwsgi:
-    image: ford3_uwsgi
+    image: hydro_uwsgi
     working_dir: /home/web/django_project
     environment:
       - PYTHONPATH=/home/web/django_project
@@ -76,7 +76,7 @@ services:
     environment:
       # take care to let the project name below match that
       # declared in the top of the makefile
-      - DUMPPREFIX=PG_ford3
+      - DUMPPREFIX=PG_hydro
       # These are all defaults anyway, but setting explicitly in
       # case we ever want to ever use different credentials
       - PGUSER=docker
