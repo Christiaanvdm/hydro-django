@@ -19,8 +19,8 @@ then
     make dbsync
     make mediasync
     # Sync the latest backups and media to staging from production
-    rsync -L  backups/latest.dmp staging.ford3.kartoza.com:/home/web/deployment/backups/
-    rsync -r -v media/ staging.ford3.kartoza.com:/home/web/deployment/media
+    rsync -L  backups/latest.dmp staging.hydro.kartoza.com:/home/web/deployment/backups/
+    rsync -r -v media/ staging.hydro.kartoza.com:/home/web/deployment/media
     # Tag the release and push to main repo
     # .version is used by Raven/Sentry
     echo $VERSION > ../django_project/.version
@@ -31,7 +31,7 @@ then
     git push --tags upstream develop
     # Check it out on the server
     # No migrations are run - you should do that manually for now
-    ssh staging.ford3.kartoza.com "cd /home/web/deployment && git fetch --tags && git checkout $VERSION && make collectstatic && make reload"
+    ssh staging.hydro.kartoza.com "cd /home/web/deployment && git fetch --tags && git checkout $VERSION && make collectstatic && make reload"
 else
     echo "Tag and deploy to staging aborted."
 fi

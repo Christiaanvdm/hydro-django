@@ -1,4 +1,4 @@
-export COMPOSE_PROJECT_NAME=ford3
+export COMPOSE_PROJECT_NAME=hydro
 export COMPOSE_FILE=docker-compose.yml$(shell if [ -f docker-compose.override.yml ]; then echo ":docker-compose.override.yml"; fi):scripts/travis/selenium-compose.yml
 export ANSIBLE_PROJECT_SETUP_DIR=ansible
 
@@ -282,7 +282,7 @@ mediasync:
 	@echo "------------------------------------------------------------------"
 	@echo "Syncing media files and secret.py from live server"
 	@echo "------------------------------------------------------------------"
-	# This section needs to be adapted for ford3 central backups
+	# This section needs to be adapted for hydro central backups
 	#@rsync -av --progress changelog.kartoza.com:/home/projecta/deployment/media/ media
 	#@rsync -av --progress changelog.kartoza.com:/home/projecta/django_project/core/settings/secret.py ../django_project/core/settings/
 	#@rsync -av --progress changelog.kartoza.com:/home/projecta/deployment/btsync-db.env btsync-db.env.PRODUCTION
@@ -293,7 +293,7 @@ dbsync:
 	@echo "------------------------------------------------------------------"
 	@echo "Syncing database files from live server"
 	@echo "------------------------------------------------------------------"
-	# This section needs to be adapted for ford3 central backups
+	# This section needs to be adapted for hydro central backups
 	#-@ssh changelog.kartoza.com "cd /home/projecta/deployment; make dbbackup"
 	#@rsync -av --progress changelog.kartoza.com:/home/projecta/deployment/backups/ backups
 
@@ -303,7 +303,7 @@ staging-sync:
 	@echo "Syncing database and media files from this host to staging server"
 	@echo "Then doing a dbrestore and migrate on the staging server"
 	@echo "------------------------------------------------------------------"
-	# This section needs to be adapted for ford3 central backups
+	# This section needs to be adapted for hydro central backups
 	#@rsync -av --progress --exclude=.sync --exclude=.DS_Store backups staging.changelog.kartoza.com:/home/projecta/deployment
 	#@rsync -av --progress --exclude=.sync --exclude=.DS_Store media staging.changelog.kartoza.com:/home/projecta/deployment
 	#-@ssh staging.changelog.kartoza.com "cd /home/projecta/deployment; make dbrestore; make migrate; make collectstatic"
