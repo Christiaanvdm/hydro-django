@@ -7,7 +7,7 @@ remote_user: lucernae
 # Your linux/mac group that will run ansible
 remote_group: staff
 # Your project location (this repo)
-project_path: "/Users/lucernae/Documents/WorkingDir/Projects/kartoza/ford3"
+project_path: "/Users/lucernae/Documents/WorkingDir/Projects/kartoza/hydro"
 # True if it will be running on Travis
 on_travis: False
 # Project name as pycharm namespace
@@ -54,11 +54,11 @@ web:
 interpreters:
   ford3:
     name: 'Ford3 Container'
-    domain_alias: 'ford3.test'
+    domain_alias: 'hydro.test'
     # Choose ssh port you want to expose
     ssh_port: &interpreters_port 51203
     pycharm_helpers: /home/web/django_project/.pycharm_helpers
-    ipaddress: 'ford3.test'
+    ipaddress: 'hydro.test'
 
 docker_port_forward:
   # Comment out db if you don't want to expose db to host

@@ -85,9 +85,9 @@ class Migration(migrations.Migration):
                 ('critical_skill', models.BooleanField(default=False)),
                 ('green_occupation', models.BooleanField(default=False)),
                 ('high_demand_occupation', models.BooleanField(default=False)),
-                ('campus_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ford3.Campus')),
-                ('interests', models.ManyToManyField(to='ford3.Interest')),
-                ('occupation_id', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='ford3.Occupation')),
+                ('campus_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='hydro.Campus')),
+                ('interests', models.ManyToManyField(to='hydro.Interest')),
+                ('occupation_id', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='hydro.Occupation')),
             ],
         ),
         migrations.CreateModel(
@@ -96,7 +96,7 @@ class Migration(migrations.Migration):
                 ('id', models.IntegerField(primary_key=True, serialize=False, unique=True)),
                 ('minimum_score', models.IntegerField()),
                 ('required', models.BooleanField()),
-                ('qualification_id', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='ford3.Qualification')),
+                ('qualification_id', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='hydro.Qualification')),
             ],
         ),
         migrations.CreateModel(
@@ -111,7 +111,7 @@ class Migration(migrations.Migration):
                 ('portfolio', models.BooleanField(default=False)),
                 ('portfolio_comment', models.CharField(max_length=255, null=True)),
                 ('aps_calculator_link', models.CharField(max_length=255, null=True)),
-                ('qualification_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ford3.Qualification')),
+                ('qualification_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='hydro.Qualification')),
             ],
         ),
         migrations.CreateModel(
@@ -126,8 +126,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.IntegerField(primary_key=True, serialize=False, unique=True)),
                 ('name', models.CharField(max_length=255)),
-                ('field_of_study_id', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='ford3.FieldOfStudy')),
-                ('occupation_id', models.ManyToManyField(to='ford3.Occupation')),
+                ('field_of_study_id', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='hydro.FieldOfStudy')),
+                ('occupation_id', models.ManyToManyField(to='hydro.Occupation')),
             ],
         ),
         migrations.CreateModel(
@@ -136,27 +136,27 @@ class Migration(migrations.Migration):
                 ('id', models.IntegerField(primary_key=True, serialize=False, unique=True)),
                 ('name', models.CharField(max_length=255)),
                 ('description', models.CharField(blank=True, max_length=255, null=True)),
-                ('secondary_institution_types', models.ManyToManyField(to='ford3.SecondaryInstitutionType')),
+                ('secondary_institution_types', models.ManyToManyField(to='hydro.SecondaryInstitutionType')),
             ],
         ),
         migrations.AddField(
             model_name='qualificationentrancerequirementsubject',
             name='subject_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='ford3.Subject'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='hydro.Subject'),
         ),
         migrations.AddField(
             model_name='qualification',
             name='sub_field_of_study_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='ford3.SubFieldOfStudy'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='hydro.SubFieldOfStudy'),
         ),
         migrations.AddField(
             model_name='qualification',
             name='subjects',
-            field=models.ManyToManyField(through='ford3.QualificationEntranceRequirementSubject', to='ford3.Subject'),
+            field=models.ManyToManyField(through='hydro.QualificationEntranceRequirementSubject', to='hydro.Subject'),
         ),
         migrations.AddField(
             model_name='campus',
             name='provider_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ford3.Provider'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='hydro.Provider'),
         ),
     ]

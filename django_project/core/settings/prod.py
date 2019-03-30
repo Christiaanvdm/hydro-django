@@ -19,7 +19,7 @@ except ImportError:
 
 ALLOWED_HOSTS = [
     'localhost:8080',
-    'ford3.kartoza.com']
+    'hydro.kartoza.com']
 
 # Pipeline - for production we want to compress resources
 PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'

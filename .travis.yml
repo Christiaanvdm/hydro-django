@@ -8,7 +8,7 @@ python:
 services: docker
 
 env:
-  - COMPOSE_PROJECT_NAME: 'ford3'
+  - COMPOSE_PROJECT_NAME: 'hydro'
     COMPOSE_FILE: 'docker-compose.yml:docker-compose.override.yml:scripts/travis/selenium-compose.yml'
 
 before_install:
@@ -52,7 +52,7 @@ jobs:
         # Fix path (codecov.yml doesn't work)
         # Replace parent directory to travis directory, because we are running
         # coverage using docker mount
-        - sed -i 's/home\/web\/django_project/home\/travis\/build\/kartoza\/ford3\/django_project/g' .coverage
+        - sed -i 's/home\/web\/django_project/home\/travis\/build\/kartoza\/hydro\/django_project/g' .coverage
         - cat .coverage
         - codecov
         - popd
