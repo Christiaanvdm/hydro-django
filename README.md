@@ -1,18 +1,14 @@
 # HYDRO 
 
-[![FORD Screenshot](http://hydroscreenshoturl)](http://hydroproductionurl)
-
-
-A django app for creating publishing open education programm data for South Africa. 
-
-View a running instance at [http://hydroproductionurl](http://hydroproductionurl)
+A Django app vir accessing the Hydrology API created by Andre Kruger.
+View a running instance at...
 
 
 Note that whilst usable, Hydro is under continual development and not
 yet feature complete.
 
 The latest source code is available at 
-[https://github.com/kartoza/hydro](https://github.com/kartoza/hydro).
+[https://github.com/kartoza/hydro-django](https://github.com/kartoza/hydro-django).
 
 * **Developers:** See our [developer guide](README-dev.md)
 * **For production:** See our [deployment guide](README-docker.md)
