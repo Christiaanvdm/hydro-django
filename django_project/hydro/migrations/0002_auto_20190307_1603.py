@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ford3', '0001_initial'),
+        ('hydro', '0001_initial'),
     ]
 
     operations = [
@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('date_start', models.DateField()),
                 ('date_end', models.DateField()),
                 ('http_link', models.CharField(max_length=255)),
-                ('qualification_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ford3.Qualification')),
+                ('qualification_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='hydro.Qualification')),
             ],
         ),
         migrations.AlterField(
@@ -55,6 +55,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='campusevent',
             name='campus_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ford3.Campus'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='hydro.Campus'),
         ),
     ]

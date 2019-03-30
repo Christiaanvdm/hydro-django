@@ -1,5 +1,5 @@
 # from django.test import TestCase
-# from ford3.models.requirements import Requirements
+# from hydro.models.requirements import Requirements
 #
 #
 # class TestRequirements(TestCase):

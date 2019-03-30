@@ -8,7 +8,7 @@ from .contrib import *  # noqa
 # Project apps
 INSTALLED_APPS += (
     'base',
-    'ford3',
+    'hydro',
 )
 
 # Due to profile page does not available,
@@ -43,7 +43,7 @@ MIDDLEWARE_CLASSES = (
 PIPELINE['JAVASCRIPT']['project'] = {
     'source_filenames': (
         'js/csrf-ajax.js',
-        'js/ford3.js',
+        'js/hydro.js',
     ),
     'output_filename': 'js/project.js',
 }
@@ -52,7 +52,7 @@ PIPELINE['JAVASCRIPT']['project'] = {
 # For third party libs like bootstrap should go in contrib.py
 PIPELINE['STYLESHEETS']['project'] = {
     'source_filenames': (
-        'css/ford3.css',
+        'css/hydro.css',
         'css/form.css',
         'css/stylesheet.css',
     ),
