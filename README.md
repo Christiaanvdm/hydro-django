@@ -1,18 +1,18 @@
-# FORD3 
+# HYDRO 
 
-[![FORD Screenshot](http://ford3screenshoturl)](http://ford3productionurl)
+[![FORD Screenshot](http://hydroscreenshoturl)](http://hydroproductionurl)
 
 
 A django app for creating publishing open education programm data for South Africa. 
 
-View a running instance at [http://ford3productionurl](http://ford3productionurl)
+View a running instance at [http://hydroproductionurl](http://hydroproductionurl)
 
 
-Note that whilst usable, Ford3 is under continual development and not
+Note that whilst usable, Hydro is under continual development and not
 yet feature complete.
 
 The latest source code is available at 
-[https://github.com/kartoza/ford3](https://github.com/kartoza/ford3).
+[https://github.com/kartoza/hydro](https://github.com/kartoza/hydro).
 
 * **Developers:** See our [developer guide](README-dev.md)
 * **For production:** See our [deployment guide](README-docker.md)
@@ -27,30 +27,30 @@ The latest source code is available at
 
 Story queue on Waffle:
 
-* [![Stories in Ready](https://badge.waffle.io/kartoza/ford3.svg?label=ready&title=Ready)](http://waffle.io/kartoza/ford3) 
-* [![Stories in In Progress](https://badge.waffle.io/kartoza/ford3.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/kartoza/ford3)
+* [![Stories in Ready](https://badge.waffle.io/kartoza/hydro.svg?label=ready&title=Ready)](http://waffle.io/kartoza/hydro) 
+* [![Stories in In Progress](https://badge.waffle.io/kartoza/hydro.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/kartoza/hydro)
 
-[![Throughput Graph](https://graphs.waffle.io/kartoza/ford3/throughput.svg)](https://waffle.io/kartoza/ford3/metrics)
+[![Throughput Graph](https://graphs.waffle.io/kartoza/hydro/throughput.svg)](https://waffle.io/kartoza/hydro/metrics)
 
 * Current test status master: [![Build Status](https://travis-ci.org/inasafe/inasafe.svg?branch=master)](https://travis-ci.org/inasafe/inasafe) and
-[![Code Health](https://landscape.io/github/kartoza/ford3/master/landscape.svg?style=flat)](https://landscape.io/github/kartoza/ford3/master)
+[![Code Health](https://landscape.io/github/kartoza/hydro/master/landscape.svg?style=flat)](https://landscape.io/github/kartoza/hydro/master)
 
 * Current test status develop: [![Build Status](https://travis-ci.org/inasafe/inasafe.svg?branch=develop)](https://travis-ci.org/inasafe/inasafe) and
-[![Code Health](https://landscape.io/github/kartoza/ford3/develop/landscape.svg?style=flat)](https://landscape.io/github/kartoza/ford3/develop)
+[![Code Health](https://landscape.io/github/kartoza/hydro/develop/landscape.svg?style=flat)](https://landscape.io/github/kartoza/hydro/develop)
 
-* Test coverage [![codecov](https://codecov.io/gh/kartoza/ford3/branch/develop/graph/badge.svg)](https://codecov.io/gh/kartoza/ford3)
+* Test coverage [![codecov](https://codecov.io/gh/kartoza/hydro/branch/develop/graph/badge.svg)](https://codecov.io/gh/kartoza/hydro)
 
 
 
 ## Quick Installation Guide
 
 For deployment we use [docker](http://docker.com) so you need to have docker 
-running on the host. Ford3 is a django app so it will help if you have
+running on the host. Hydro is a django app so it will help if you have
 some knowledge of running a django site.
 
 ```
-git clone git://github.com/kartoza/ford3.git
-cd ford3/deployment
+git clone git://github.com/kartoza/hydro.git
+cd hydro/deployment
 cp btsync-db.env.EXAMPLE btsync-db.env
 cp btsync-media.env.EXAMPLE btsync-media.env
 make build
@@ -81,7 +81,7 @@ Authorized redirect URIs
 
 http://<your domain>/en/complete/google-oauth2/
 
-Use the ford3 admin panel to set up the google account with your id and
+Use the hydro admin panel to set up the google account with your id and
 secret
 
 
@@ -106,25 +106,20 @@ relevant SECRET and DEVICE settings.
 We work under the philosophy that stakeholders should have access to the
 development and source code, and be able to participate in every level of the 
 project - we invite comments, suggestions and contributions.  See
-[our milestones list](https://github.com/kartoza/ford3/milestones) and
-[our open issues list](https://github.com/kartoza/ford3/issues?page=1&state=open)
+[our milestones list](https://github.com/kartoza/hydro/milestones) and
+[our open issues list](https://github.com/kartoza/hydro/issues?page=1&state=open)
 for known bugs and outstanding tasks. You can also chat live with our developers
 and community members using the link below.
 
 
 ## Credits
 
-Ford3 was developed by [Kartoza.com](http://kartoza.com) and 
-individual contributors. The project is funded by the [Ford Foundation](http://fordfoundation.org).
+Hydro was developed by Andre Kruger and 
+individual contributors. The project is owned by Andre Kruger.
 
 ## License
 
-Ford3 is free software: you can redistribute it and/or modify it
-under the terms of the GNU General Public License version 3 (GPLv3) as
-published by the Free Software Foundation.
-
-The full GNU General Public License is available in LICENSE.txt or
-http://www.gnu.org/licenses/gpl.html
+Hydro is currently free to use.
 
 
 ## Disclaimer of Warranty (GPLv3)
@@ -140,7 +135,7 @@ all necessary servicing, repair or correction.
 
 ## Thank you
 
-Thank you to the individual contributors who have helped to build ford3:
+Thank you to the individual contributors who have helped to build hydro:
 
 * Tim Sutton (Lead developer): tim@kartoza.com
 * Dražen Odobašić : dodobas@geoinfo.geof.hr

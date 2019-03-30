@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class Ford3Config(AppConfig):
+class hydroConfig(AppConfig):
     name = 'hydro'

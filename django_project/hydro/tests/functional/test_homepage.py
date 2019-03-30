@@ -1,7 +1,7 @@
 # coding=utf-8
 import unittest
 
-from ford3.tests.functional.utils import SeleniumTestCase, selenium_flag_ready
+from hydro.tests.functional.utils import SeleniumTestCase, selenium_flag_ready
 
 
 class TestHomepage(SeleniumTestCase):
@@ -14,4 +14,4 @@ class TestHomepage(SeleniumTestCase):
         self.assertTrue(self.driver)
 
         self.driver.get(self.live_server_url)
-        self.assertIn('FORD3', self.driver.title)
+        self.assertIn('hydro', self.driver.title)

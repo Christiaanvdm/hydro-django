@@ -4,13 +4,13 @@ services:
   # This docker compose files will make sure that we build a new docker image
   base_uwsgi:
     build: docker
-    image: ford3_uwsgi
+    image: hydro_uwsgi
 
   uwsgi:
     build:
       context: docker
       dockerfile: Dockerfile-dev
-    image: ford3_dev_uwsgi
+    image: hydro_dev_uwsgi
     environment:
       # For Selenium tests
       SELENIUM_DRIVER: http://hub:4444/wd/hub
