@@ -5,8 +5,9 @@
 from os.path import exists, dirname, join
 
 from .project import *  # noqa
+
 try:
-    from .secret import SENTRY_KEY
+    from .secret import *  # noqa
 except ImportError:
     SENTRY_KEY = None
 
@@ -21,9 +22,9 @@ ALLOWED_HOSTS = [
     'ford3.kartoza.com']
 
 # Pipeline - for production we want to compress resources
-PIPELINE_ENABLED = True
-PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
-PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
+PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'
+PIPELINE['CSS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'
+PIPELINE['PIPELINE_ENABLED'] = True
 
 # Comment if you are not running behind proxy
 USE_X_FORWARDED_HOST = True
@@ -95,7 +96,7 @@ if 'raven.contrib.django.raven_compat' in INSTALLED_APPS and SENTRY_KEY:
                 'formatter': 'verbose'
             },
             'null': {
-                'class': 'django.utils.log.NullHandler',
+                'class': 'logging.NullHandler',
             },
         },
         'loggers': {

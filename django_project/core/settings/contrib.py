@@ -1,11 +1,8 @@
-# coding=utf-8
-"""
-core.settings.contrib
-"""
 from .base import *  # noqa
 
-# Extra installed apps - grapelli needs to be added before others
+# Extra installed apps that needs to be added before others
 INSTALLED_APPS = (
+    'test_without_migrations',
     'grappelli',
 ) + INSTALLED_APPS
 
@@ -54,24 +51,24 @@ PIPELINE_TEMPLATE_FUNC = '_.template'
 # enable cached storage - requires uglify.js (node.js)
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
-# Contributed / third party js libs for pipeline compression
-# For hand rolled js for this app, use project.py
-PIPELINE_JS = {}
-PIPELINE_JS['contrib'] = {
-    'source_filenames': (
-        #'js/.js',
-    ),
-    'output_filename': 'js/contrib.js',
+# Contributed / third party js libs and css for pipeline compression
+# For hand rolled js/css for this app, use project.py
+
+PIPELINE = {
+    # These get enabled in prod.py
+    'JS_COMPRESSOR': None,
+    'CSS_COMPRESSOR': None,
+    'PIPELINE_ENABLED': False,
+    'JAVASCRIPT': {
+        'contrib': {
+            'source_filenames': (
+                # 'js/.js',
+            ),
+            'output_filename': 'js/contrib.js',
+        }
+    },
+    'STYLESHEETS': {}
 }
-
-# Contributed / third party css for pipeline compression
-# For hand rolled css for this app, use project.py
-PIPELINE_CSS = {}
-
-# These get enabled in prod.py
-PIPELINE_ENABLED = False
-PIPELINE_CSS_COMPRESSOR = None
-PIPELINE_JS_COMPRESSOR = None
 
 # Django-allauth related settings
 
