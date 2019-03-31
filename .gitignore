@@ -127,3 +127,6 @@ deployment/ansible/tmp
 deployment/ansible/development/site.retry
 deployment/ansible/development/group_vars/all.yml
 deployment/docker-compose.override.yml
+
+django_project/hydro/models/Hydro1
+django_project/hydro/models/HydroSHEDS
