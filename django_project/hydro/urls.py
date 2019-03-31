@@ -1,8 +1,13 @@
 # coding=utf-8
 from django.urls import path
-from hydro.views import views
+from .views import views
 
 urlpatterns = [
-    path('providers/<int:provider_id>/',
+# providers/<int:provider_id>/
+    path('',
          views.home,
-         name='show_provider')]
+         name='home'),
+    path('<str:x_coord>/<str:y_coord>',
+         views.hydropt,
+         name='hydropt'),
+]
