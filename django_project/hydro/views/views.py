@@ -3,8 +3,8 @@ from django.shortcuts import (
     render,
 )
 from django.http import HttpResponse
-from hydro.views.hydropts import get_geojson
-from hydro.models import
+from hydro.views.hydropts import get_square_geojson
+
 
 
 # Create your views here.
@@ -17,7 +17,8 @@ def home(request):
 def hydropt(request, x_coord, y_coord):
     x = x_coord
     y = y_coord
-    response = json.dumps(get_geojson())
+    geojson = get_square_geojson(x, y, 1)
+    response = json.dumps(geojson)
     return HttpResponse(response)
     # return HttpResponse(get_geojson())
     # context = {'x': x, 'y': y}
