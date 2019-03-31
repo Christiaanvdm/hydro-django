@@ -2,7 +2,9 @@
 """Urls for changelog application."""
 from django.conf.urls import url
 
+
 from .views import Home, custom_404
+
 
 urlpatterns = [
     # basic app views

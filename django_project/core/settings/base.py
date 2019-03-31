@@ -1,7 +1,6 @@
 from .utils import absolute_path
 
 ADMINS = (
-    ('Tim Sutton', 'tim@kartoza.com'),
     ('Christiaan van der Merwe', 'christiaan@kartoza.com'),
 )
 
@@ -57,6 +56,7 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     absolute_path('core', 'base_static'),
+    absolute_path('hydro', 'static')
 )
 
 # List of finder classes that know how to find static files in
